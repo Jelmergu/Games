@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="assets/js/Move.js"  type="text/javascript"></script>
+    <script src="assets/js/AI.js"  type="text/javascript"></script>
+    <title>Tic Tac Toe</title>
+    <style>
+        button {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<table id="board">
+    <tr>
+        <td><button id="1" value=""></button>1</td>
+        <td><button id="4" value=""></button>4</td>
+        <td><button id="7" value=""></button>7</td>
+    </tr>
+    <tr>
+        <td><button id="2" value=""></button>2</td>
+        <td><button id="5" value=""></button>5</td>
+        <td><button id="8" value=""></button>8</td>
+    </tr>
+    <tr>
+        <td><button id="3" value=""></button>3</td>
+        <td><button id="6" value=""></button>6</td>
+        <td><button id="9" value=""></button>9</td>
+    </tr>
+</table>
+<script>
+    var done = false;
+    while (done != "won" && done != "draw") {
+        done = AI.easy.move();
+    }
+</script>
+</body>
+</html>
